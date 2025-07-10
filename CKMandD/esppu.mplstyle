@@ -1,0 +1,26 @@
+# Matt's mpl style file for the MPhil code
+
+axes.labelsize : 16
+
+xtick.labelsize : 14
+ytick.labelsize : 14
+xtick.top : True
+ytick.right : True
+xtick.minor.visible : True
+ytick.minor.visible : True
+xtick.direction: in
+ytick.direction: in
+xtick.major.size: 6
+ytick.major.size: 6
+xtick.minor.size: 3
+ytick.minor.size: 3
+
+font.size : 13
+
+text.usetex : True
+
+errorbar.capsize : 2
+
+legend.fontsize : 12
+
+figure.autolayout : True
