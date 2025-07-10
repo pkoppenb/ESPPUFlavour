@@ -102,8 +102,8 @@ if __name__ == "__main__":
             "time_periods": ["Current", "2030s", "2040s","2050s"], # Time periods for the x-axis
             "data_config": { #
 		"atlas_error": ["",[None,None,[0.40,0.08,0.08],None],"red","ATLAS (Uncertainty)"],
-                "atlas_bar": ["bar", [2.1, None, None,None], "red", "ATLAS (95% C.L.)"],  # [data type, values, color, label]
-                "cms_bar": ["bar", [1.5, None, None, None], "orange", "CMS (90% C.L.)"],                
+                "atlas_bar": ["bar", [2.1, None, None,None], "red", "ATLAS (95\% C.L.)"],  # [data type, values, color, label]
+                "cms_bar": ["bar", [1.5, None, None, None], "orange", "CMS (90\% C.L.)"],                
                 "cms_uncertainty": ["o", [None, None, 0.12, None], "orange", "CMS (Uncertainty)"],
                 "lhcb_uncertainty": ["^", [0.79, 0.3, 0.12, None], "green", "LHCb (Uncertainty)"],
 		"fccee_uncertainty": ["v", [None, None, None, 0.15], "magenta", "FCC-ee (Uncertainty)"],
@@ -160,16 +160,16 @@ if __name__ == "__main__":
             },
         },	
         "RK": {
-            "plot_title": r"LFU ratio $R(K^{(*)})$",
-            "y_title": r"Uncertainty on $R(K^{(*)})$",
+            "plot_title": r"LFU ratio $R_{K^{(*)}}$",
+            "y_title": r"Uncertainty on $R_{K^{(*)}}$",
             "plot_name": "RK_uncertainty",
 	    "legend_loc": "upper right",
 	    "y_max": 1.0,
 	    "time_periods": ["Current", "2030s", "2040s", "2050s"], # Time periods for the x-axis
             "data_config": {
-                "belle2": ["s", [0.38, 0.07, 0.032, None], "blue", r"Belle II $R(K^{*})$"],
-                "lhcb": ["^", [0.047, 0.020, 0.007, None], "green", r"LHCb $R(K^+)$"],
-                #"ilc": ["o", [None, None, None, 0.164], "orange", r"$2\times 10^{9}Z^0$ $R(K^{*})$"], 
+                "belle2": ["s", [0.38, 0.07, 0.032, None], "blue", r"Belle II $R_{K^{*}}$"],
+                "lhcb": ["^", [0.047, 0.020, 0.007, None], "green", r"LHCb $R_{K^+}$"],
+                #"ilc": ["o", [None, None, None, 0.164], "orange", r"$2\times 10^{9}Z^0$ $R_{K^{*}}$"], 
 		"lep3": ["^", [None, None, None, 0.0062], "pink", "LEP3"],
                 "fccee": ["v", [None, None, None, 0.003], "magenta", "FCC-ee"],
             },
