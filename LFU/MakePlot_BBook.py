@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
+plt.style.use('../VcbVcs/esppu.mplstyle')
 
 def make_plot(plot_config=None):
     # Import data
@@ -20,6 +21,7 @@ def make_plot(plot_config=None):
             if values[1][val] is None:
                 continue
             elif values[0] == "bar":
+#                print(x[val], shift, values[1][val], values[2], values[3], plot_config["point_displace"])
                 plt.bar(x[val]+shift, values[1][val], color=values[2], label=values[3], width=plot_config["point_displace"])
             elif isinstance(values[1][val],list):
                 plt.errorbar(x[val]+shift, values[1][val][0], yerr=[[values[1][val][1]],[values[1][val][2]]],fmt=values[0], color=values[2], elinewidth=3, label=values[3], markersize=plot_config["marker_size"])
@@ -51,7 +53,10 @@ def make_plot(plot_config=None):
 
     # Draw plot
     plt.tight_layout()
-    plt.savefig(f"{plot_config['plot_name']}.{plot_config['extension']}", dpi=300, bbox_inches='tight')
+    if 'pdf' == plot_config['extension']:  # vector
+        plt.savefig("{0}.{1}".format(plot_config['plot_name'],plot_config['extension']))      #apologies, I have an old version of python
+    else:
+        plt.savefig("{0}.{1}".format(plot_config['plot_name'],plot_config['extension'], dpi=300, bbox_inches='tight'))
 
 
 if __name__ == "__main__":
@@ -59,7 +64,7 @@ if __name__ == "__main__":
         "legend_title": "", #Title for the legend
         "x_title": "Time Period", #Title for the x-axis
         "point_displace": 0.15, #Displacement of points for better visibility and bar width
-        "extension": "png", #File extension for saving the plot
+        "extension": "pdf", #File extension for saving the plot
         "marker_size": 12, #Size of the markers
         "legend_loc": "upper right", #Location of the legend
 	"legend_font" : 15, #font size for the legend
