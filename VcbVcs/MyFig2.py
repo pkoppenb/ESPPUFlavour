@@ -2,8 +2,11 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib
+import matplotlib.image as image
+from matplotlib.offsetbox import OffsetImage, AnnotationBbox
+
 plt.style.use('esppu.mplstyle')
-fontNames = {'size'   : 15}   # Names of hadrons next to markers
+im = image.imread('ESPP-logo-2025-color_color-crop.png')
 
 # scan log from 0.001 to 2. -> -3 to log(2)/log(10.)
 minE = 0.001
@@ -79,7 +82,6 @@ Vcs_LC_y = offsetStats(Vcs_FCC_y,nLC/nFCC)
 Vcs_LEP3_y = offsetStats(Vcs_FCC_y,nLEP3/nFCC)
             
 plt.figure(figsize=(7,5))
-plt.rc('font', **fontNames)
 fig, ax = plt.subplots()
 fig.subplots_adjust(top=0.98,right=0.97,bottom=0.14,left=0.15)
 
@@ -146,16 +148,14 @@ plt.fill_between([minE2,maxE2], [Vcbunc,Vcbunc], [Vcbdiscr,Vcbdiscr], color='pin
 
 # plt.scatter(RuanE,Ruan,20,marker='s',label='Liang et.al.',color='mediumturquoise')
 
+imagebox = OffsetImage(im, zoom=0.04)
+ab = AnnotationBbox(imagebox, (0.8, 0.2), 
+                    xycoords='axes fraction',
+                    frameon=False)
+ax.add_artist(ab)
 
 plt.legend()
-"""
-plt.text(2.,7.,"ESPP26, preliminary",
-          fontsize=10.,
-          bbox=dict(boxstyle="square",
-                    ec=(33/256.,        83/256.,        172/256.),
-                    fc=(217/256.,       237/256.,       237/256.))
-          )
-"""
+# ax.imshow(im, aspect='auto')
 
 plt.xlabel("Uncertainty on tagging efficiency [\%]")
 plt.ylabel("Total uncertainty on $|V_{cb}|$ [\%]")
@@ -186,7 +186,6 @@ ax.get_xaxis().set_major_formatter(matplotlib.ticker.ScalarFormatter())
 plt.fill_between([minE,maxE2], [0.005,0.005], [Vcsunc,Vcsunc], color='cyan', alpha=0.1, label='$|V_{cs}|$ uncertainty')
 
 # plt.scatter(RuanE,Ruan,20,marker='s',label='Liang et.al.',color='mediumturquoise')
-
 
 plt.legend()
 """
