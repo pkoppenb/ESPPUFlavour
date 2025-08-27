@@ -148,11 +148,13 @@ plt.fill_between([minE2,maxE2], [Vcbunc,Vcbunc], [Vcbdiscr,Vcbdiscr], color='pin
 
 # plt.scatter(RuanE,Ruan,20,marker='s',label='Liang et.al.',color='mediumturquoise')
 
+"""
 imagebox = OffsetImage(im, zoom=0.04)
 ab = AnnotationBbox(imagebox, (0.8, 0.2), 
                     xycoords='axes fraction',
                     frameon=False)
 ax.add_artist(ab)
+"""
 
 plt.legend()
 # ax.imshow(im, aspect='auto')
