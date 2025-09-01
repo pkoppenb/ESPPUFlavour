@@ -1,9 +1,9 @@
 # Matt's mpl style file for the MPhil code
 
-axes.labelsize : 16
+axes.labelsize : 18
 
-xtick.labelsize : 14
-ytick.labelsize : 14
+xtick.labelsize : 15
+ytick.labelsize : 15
 xtick.top : True
 ytick.right : True
 xtick.minor.visible : True
@@ -15,12 +15,12 @@ ytick.major.size: 6
 xtick.minor.size: 3
 ytick.minor.size: 3
 
-font.size : 13
+font.size : 15
 
 text.usetex : True
 
 errorbar.capsize : 2
 
-legend.fontsize : 12
+legend.fontsize : 15
 
 figure.autolayout : True
