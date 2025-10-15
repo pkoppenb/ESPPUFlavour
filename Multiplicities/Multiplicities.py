@@ -20,14 +20,18 @@ bMult = [
     10,  # hep-ex9907057.pdf
     23   # SLD
 ]
+errs = [
+    [50,0,0],
+    [100,0,0]
+    ]
+for i in range(3): # need three series to get three colors
+    plt.errorbar(bMult[i],bCross[i],xerr=[[errs[0][i]],[errs[1][i]]],fmt='o',label=labels[i])
 
-for i in range(3):
-    plt.plot(bMult[i],bCross[i],'o',label=labels[i])
 plt.yscale('log')
 plt.xscale('log')
 # plt.ylim([0.2,2e6])
 plt.xlim([7,120])
-ax.set_xticks([10,20,30,80,100])
+ax.set_xticks([10,20,30,50,100])
 ax.get_xaxis().set_major_formatter(matplotlib.ticker.ScalarFormatter())
 plt.xlabel("Charged multiplicity in $b\\bar{b}$ events")
 plt.ylabel("Cross-section $\\sigma(b\\bar{b})$ [nb]")
