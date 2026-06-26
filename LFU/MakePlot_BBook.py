@@ -120,7 +120,7 @@ if __name__ == "__main__":
             "data_config": {
 		"belle2_barKst": ["bar", [3400, 1500, None], "blue", "Belle II"], #"Belle II (90% C.L.)"],
 		"belle2_barK": ["bar", [1900, 900, None], "cyan", r"Belle II $K^+\tau^+\tau^-$"],
-		"ilc_bar": ["bar", [None, None, 55], "orange", "LFC"],                
+		"ilc_bar": ["bar", [None, None, 55], "orange", "LCF"],                
 		"lep3_bar": ["bar", [None, None, 2.0], "pink", "LEP3"],
                 "fccee_uncertainty": ["v", [None, None, 1], "magenta", "FCC-ee"],
             },
@@ -136,7 +136,7 @@ if __name__ == "__main__":
             "data_config": {
                 "belle2_uncertaintyKst": ["s", [33, 23, None], "blue", "Belle II "],
    		"belle2_uncertaintyK": ["s", [14, 8, None], "cyan", r"Belle II $K^+\nu\bar{\nu}$"],
-                "ilc_uncertainty": ["o", [None, None, 28], "orange", "LFC"],
+                "ilc_uncertainty": ["o", [None, None, 28], "orange", "LCF"],
                 "lep3_uncertainty": ["^", [None, None, 1.32], "pink", "LEP3"],
                 "fccee_uncertainty": ["v", [None, None, 0.75], "magenta", "FCC-ee"],
             },
